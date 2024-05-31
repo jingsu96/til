@@ -36,7 +36,7 @@ const Header = ({ from }) => {
   );
 };
 
-const locales = { 'zh-tw': 'jing-tech.me', en: 'en.jing-tech.me' };
+const locales = { 'zh-tw': 'v2.jing-tech.me', en: 'en.jing-tech.me' };
 const LANDGUAGE = { 'zh-tw': '繁體中文', en: 'English' };
 
 const LanguageSelect = () => {
