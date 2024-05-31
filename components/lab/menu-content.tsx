@@ -46,7 +46,7 @@ const LanguageSelect = () => {
   };
 
   return (
-    <Select defaultValue="en" onValueChange={changeLanguage} size="2" className="mt-auto ">
+    <Select defaultValue="en" onValueChange={changeLanguage}>
       <SelectTrigger className="mx-auto mb-4 mt-auto w-[180px] border-border">
         <SelectValue>
           <span className="text-sm font-medium">English</span>
