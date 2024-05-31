@@ -88,7 +88,7 @@ const TOCInline = ({
     : new RegExp('^(' + exclude + ')$', 'i');
 
   const filteredToc = toc.filter(
-    (heading) => heading.depth >= fromHeading && heading.depth <= toHeading && !re.test(heading.value)
+    (heading) => heading.depth >= fromHeading && heading.depth <= toHeading && !re.test(heading.value),
   );
 
   const createList = (items: NestedTocItem[] | undefined) => {
@@ -118,7 +118,7 @@ const TOCInline = ({
         <Collapsible.Root className={cn('flex flex-col rounded-lg bg-bg-alt py-1 dark:bg-bg-elv', 'CollapsibleRoot')}>
           <Collapsible.Trigger className="mx-6 py-2 text-start text-lg font-bold transition-all [&[data-state=open]>div>svg]:rotate-180">
             <div className="flex items-center justify-between">
-              文章目錄
+              Table of Contents
               <ChevronDown className="transition-transform duration-200" aria-hidden />
             </div>
           </Collapsible.Trigger>

@@ -9,7 +9,6 @@ import tagData from 'app/tag-data.json';
 import { FloatingHeader } from '@/components/lab/floating-header';
 import { cn } from '@/lib/utils';
 import ListItem from '@/components/ListItem';
-import { TOPIC_EN_TO_ZH } from '@/lib/constants';
 
 interface PaginationProps {
   totalPages: number;
@@ -112,7 +111,7 @@ export default function ListLayoutWithTags({ posts, title, initialDisplayPosts =
                     <li key={t} className="my-3">
                       {pathname.split('/tags/')[1] === slug(t) ? (
                         <h3 className="inline px-3 py-2 text-sm font-bold uppercase text-indigo-1">
-                          {`${TOPIC_EN_TO_ZH[t]} (${tagCounts[t]})`}
+                          {`${t} (${tagCounts[t]})`}
                         </h3>
                       ) : (
                         <Link
@@ -120,7 +119,7 @@ export default function ListLayoutWithTags({ posts, title, initialDisplayPosts =
                           className="px-3 py-2 text-sm font-medium uppercase text-text-1 hover:text-indigo-1 dark:hover:text-indigo-1"
                           aria-label={`View posts tagged ${t}`}
                         >
-                          {`${TOPIC_EN_TO_ZH[t]} (${tagCounts[t]})`}
+                          {`${t} (${tagCounts[t]})`}
                         </Link>
                       )}
                     </li>

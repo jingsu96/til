@@ -15,7 +15,7 @@ export function MobileDrawer() {
         </Button>
       </DrawerTrigger>
       <DrawerContent className="h-4/5 border-none bg-bg-alt shadow-jt1 outline-none">
-        <div className="overflow-y-auto p-4">
+        <div className="overflow-y-auto p-4 flex flex-col h-full">
           <MenuContent from={'Drawer'} />
         </div>
       </DrawerContent>

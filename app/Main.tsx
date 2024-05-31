@@ -65,7 +65,7 @@ export default function Home({ posts: items, authors }) {
         </div>
         <div className="my-4 lg:my-4">
           <h1 className="text-m mb-m font-bold leading-tight text-[#ff0a78] dark:text-[#ff0a78] sm:text-lg">
-            Latest Writings
+            LATEST WRITINGS
           </h1>
           <WritingList items={items} maxDisplay={MAX_DISPLAY} />
         </div>

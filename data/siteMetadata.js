@@ -8,8 +8,8 @@ const siteMetadata = {
   language: 'en-US',
   locale: 'en-US',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://v2.jing-tech.me',
-  siteRepo: 'https://github.com/jingsu96/todayIlearned',
+  siteUrl: 'https://en.jing-tech.me',
+  siteRepo: 'https://github.com/jingsu96/en.jing-tech.me',
   siteLogo: '/static/images/logo.jpeg',
   socialBanner: '/static/images/logo.jpeg',
   email: 'jing.tech.tw@gmail.com',
@@ -83,9 +83,10 @@ const siteMetadata = {
     provider: 'algolia',
     algoliaConfig: {
       // The application ID provided by Algolia
-      appId: 'app id',
+      appId: '0LLTNLCZEX',
       // Public API key: it is safe to commit it
-      apiKey: 'you key',
+      apiKey: '1a50969226d205e23f742d9e6f7effe9',
+      indexName: 'v2-jing-tech',
     },
   },
 };

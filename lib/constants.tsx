@@ -116,9 +116,9 @@ export const CONTENT_TYPES = {
 
 export const WORK_EXPERIENCE = [
   {
-    name: 'Google',
-    link: 'https://www.google.com',
-    image: '/static/images/google.png',
+    name: 'Houzz',
+    link: 'https://www.houzz.com',
+    image: '/static/images/experience/houzz.png',
     experience: [
       {
         title: 'Software Engineer',
@@ -132,12 +132,23 @@ export const WORK_EXPERIENCE = [
       },
     ],
   },
+  {
+    name: 'Jkopay',
+    link: 'https://www.jkopay.com',
+    image: '/static/images/experience/jkopay.png',
+    experience: [
+      {
+        title: 'Frontend Engineer',
+        period: 'October 2019 - October 2021',
+      },
+    ],
+  },
 ];
 
 export const ORDER = {
-  'writing/example': {
-    Basic: 1,
-    Advacned: 2,
+  'writing/experiences': {
+    Career: 1,
+    Learning: 2,
   },
 };
 
