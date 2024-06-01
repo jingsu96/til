@@ -44,7 +44,7 @@
     "image-size": "1.0.0",
     "lucide-react": "^0.378.0",
     "markdown-to-jsx": "^7.4.7",
-    "next": "link:@vercel/speed-insights/next",
+    "next": "^14.2.3",
     "next-contentlayer2": "0.4.6",
     "next-themes": "^0.3.0",
     "pliny": "0.2.1",

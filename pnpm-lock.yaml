@@ -90,7 +90,7 @@ dependencies:
     specifier: ^7.4.7
     version: 7.4.7(react@18.3.1)
   next:
-    specifier: link:@vercel/speed-insights/next
+    specifier: ^14.2.3
     version: 14.2.3(@babel/core@7.24.5)(@opentelemetry/api@1.8.0)(react-dom@18.3.1)(react@18.3.1)
   next-contentlayer2:
     specifier: 0.4.6
