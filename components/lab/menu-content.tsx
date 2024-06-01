@@ -31,10 +31,11 @@ const LanguageSelect = ({ className, iconSize = 20 }: { className?: string; icon
       >
         <Languages size={iconSize} />
       </SelectTrigger>
-      <SelectContent className="rounded-md bg-bg-primary shadow-jt2">
+      <SelectContent className="rounded-md bg-bg-primary shadow-jt2" sideOffset={-5}>
         {Object.keys(locales).map((key) => {
+          const active = key === 'en';
           return (
-            <SelectItem key={key} value={key}>
+            <SelectItem key={key} value={key} className={cn('mt-1 hover:bg-bg-soft', active && 'bg-bg-soft')}>
               <span>{LANDGUAGE[key]}</span>
             </SelectItem>
           );
