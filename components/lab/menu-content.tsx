@@ -8,10 +8,38 @@ import { PROFILES, LINKS } from '@/lib/constants';
 import ThemeSwitch from '@/components/ThemeSwitch';
 import SearchButton from '../SearchButton';
 import siteMetadata from '@/data/siteMetadata';
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from '@/components/lab/ui/select';
+import { Languages } from 'lucide-react';
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/lab/ui/select';
+import { cn } from '@/lib/utils';
+
+const locales = { 'zh-tw': 'v2.jing-tech.me', en: 'en.jing-tech.me' };
+const LANDGUAGE = { 'zh-tw': '繁體中文', en: 'English' };
+
+const LanguageSelect = ({ className, iconSize = 20 }: { className?: string; iconSize?: number }) => {
+  const changeLanguage = (newlocale) => {
+    window.location.href = `https://${locales[newlocale]}`;
+  };
+
+  return (
+    <Select defaultValue="en" onValueChange={changeLanguage}>
+      <SelectTrigger className={cn('mb-4 ml-auto mt-auto w-fit border-border', className)} showIcon={false}>
+        <Languages size={iconSize} />
+      </SelectTrigger>
+      <SelectContent className="border-border bg-bg-alt">
+        {Object.keys(locales).map((key) => {
+          return (
+            <SelectItem key={key} value={key}>
+              <span>{LANDGUAGE[key]}</span>
+            </SelectItem>
+          );
+        })}
+      </SelectContent>
+    </Select>
+  );
+};
 
 const Header = ({ from }) => {
-  const { author, position } = siteMetadata;
+  const { author, position, title } = siteMetadata;
   return (
     <div className="inline-flex justify-between">
       <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
@@ -24,44 +52,16 @@ const Header = ({ from }) => {
           className="rounded-full border shadow-sm"
         />
         <div className="flex flex-col">
-          <span className="font-semibold tracking-tight">{author}</span>
-          <span className="text-gray-600 dark:text-gray-300">{position}</span>
+          <span className="font-semibold tracking-tight">{title}</span>
+          <span className="text-gray-600 dark:text-gray-300 md:hidden">{position}</span>
         </div>
       </Link>
-      <div className="inline-flex gap-x-4">
+      <div className="inline-flex items-center gap-x-5">
         <SearchButton />
-        <ThemeSwitch className={from === 'Drawer' ? 'flex' : 'hidden lg:flex'} offSet={-14} />
+        <ThemeSwitch className={from === 'Drawer' ? 'flex' : 'hidden lg:flex'} />
+        <LanguageSelect className="my-0 flex border-none p-0" iconSize={16} />
       </div>
     </div>
-  );
-};
-
-const locales = { 'zh-tw': 'v2.jing-tech.me', en: 'en.jing-tech.me' };
-const LANDGUAGE = { 'zh-tw': '繁體中文', en: 'English' };
-
-const LanguageSelect = () => {
-  console.log('run');
-  const changeLanguage = (newlocale) => {
-    window.location.href = `https://${locales[newlocale]}`;
-  };
-
-  return (
-    <Select defaultValue="en" onValueChange={changeLanguage}>
-      <SelectTrigger className="mx-auto mb-4 mt-auto w-[180px] border-border">
-        <SelectValue>
-          <span className="text-sm font-medium">English</span>
-        </SelectValue>
-      </SelectTrigger>
-      <SelectContent className="border-border">
-        {Object.keys(locales).map((key) => {
-          return (
-            <SelectItem key={key} value={key}>
-              <span>{LANDGUAGE[key]}</span>
-            </SelectItem>
-          );
-        })}
-      </SelectContent>
-    </Select>
   );
 };
 
@@ -93,7 +93,6 @@ export const MenuContent = ({ from }: { from?: string }) => {
           </div>
         </div>
       </div>
-      <LanguageSelect />
     </>
   );
 };

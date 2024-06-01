@@ -147,8 +147,8 @@ export const WORK_EXPERIENCE = [
 
 export const ORDER = {
   'writing/experiences': {
-    Career: 1,
-    Learning: 2,
+    Career: 2,
+    Learning: 1,
   },
 };
 

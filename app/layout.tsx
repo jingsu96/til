@@ -78,22 +78,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1f" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <script
-        src="https://giscus.app/client.js"
-        data-repo="jingsu96/en.jing-tech.me"
-        data-repo-id="R_kgDOMCtUag"
-        data-category="General"
-        data-category-id="DIC_kwDOMCtUas4Cfw6C"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossOrigin="anonymous"
-        async
-      ></script>
       <body>
         {/* eslint-disable-next-line react/no-unknown-property */}
         <ThemeProviders>
@@ -119,14 +103,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
         <TailwindIndicator />
         <SpeedInsights />
-
-        {/* 
-        <Script
-          src="https://unpkg.com/@tinybirdco/flock.js"
-          data-host="https://api.tinybird.co"
-          data-token={process.env.NEXT_PUBLIC_TINYBIRD_TOKEN}
-          strategy="lazyOnload"
-        /> */}
       </body>
     </html>
   );
