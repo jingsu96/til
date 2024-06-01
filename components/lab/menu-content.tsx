@@ -22,10 +22,16 @@ const LanguageSelect = ({ className, iconSize = 20 }: { className?: string; icon
 
   return (
     <Select defaultValue="en" onValueChange={changeLanguage}>
-      <SelectTrigger className={cn('mb-4 ml-auto mt-auto w-fit border-border', className)} showIcon={false}>
+      <SelectTrigger
+        className={cn(
+          'mb-4 ml-auto mt-auto w-fit border-border focus:outline-none [&:has(:focus-visible)]:ring-1',
+          className,
+        )}
+        showIcon={false}
+      >
         <Languages size={iconSize} />
       </SelectTrigger>
-      <SelectContent className="border-border bg-bg-alt">
+      <SelectContent className="rounded-md bg-bg-primary shadow-jt2">
         {Object.keys(locales).map((key) => {
           return (
             <SelectItem key={key} value={key}>
