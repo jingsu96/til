@@ -1,15 +1,15 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Jing Tech',
+  title: 'TIL - Jing Tech',
   author: 'JingHuang Su',
   position: 'Software Engineer',
-  headerTitle: 'v2.jing-tech.me',
-  description: 'A blog created with Next.js and Tailwind.css',
+  headerTitle: 'til.jing-tech.me',
+  description: 'My personal blog where I share my thoughts and learnings.',
   language: 'en-US',
   locale: 'en-US',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://en.jing-tech.me',
-  siteRepo: 'https://github.com/jingsu96/en.jing-tech.me',
+  siteUrl: 'https://til.jing-tech.me',
+  siteRepo: 'https://github.com/jingsu96/til.jing-tech.me',
   siteLogo: '/static/images/logo.jpeg',
   socialBanner: '/static/images/logo.jpeg',
   email: 'jing.tech.tw@gmail.com',
@@ -36,9 +36,9 @@ const siteMetadata = {
     // posthogAnalytics: {
     //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     // },
-    googleAnalytics: {
-      googleAnalyticsId: 'G-4GL5XYYCX2', // e.g. G-XXXXXXX
-    },
+    // googleAnalytics: {
+    //   googleAnalyticsId: 'G-4GL5XYYCX2', // e.g. G-XXXXXXX
+    // },
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus

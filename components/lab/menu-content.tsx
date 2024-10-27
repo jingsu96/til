@@ -66,7 +66,7 @@ const Header = ({ from }) => {
       <div className="inline-flex items-center gap-x-5">
         <SearchButton />
         <ThemeSwitch className={from === 'Drawer' ? 'flex' : 'hidden lg:flex'} />
-        <LanguageSelect className="my-0 flex border-none p-0" iconSize={16} />
+        {/* <LanguageSelect className="my-0 flex border-none p-0" iconSize={16} /> */}
       </div>
     </div>
   );
@@ -90,15 +90,19 @@ export const MenuContent = ({ from }: { from?: string }) => {
             ))}
           </div>
         </div>
-        <hr />
-        <div className="mt-4 flex flex-col gap-2 text-sm">
-          <span className="px-2 text-xs font-medium leading-relaxed text-gray-600 dark:text-gray-200">Online</span>
-          <div className="flex flex-col gap-1">
-            {Object.values(PROFILES).map((profile) => (
-              <NavigationLink key={profile.url} href={profile.url} label={profile.title} icon={profile.icon} />
-            ))}
-          </div>
-        </div>
+        {Object.keys(PROFILES).length > 0 && (
+          <>
+            <hr />
+            <div className="mt-4 flex flex-col gap-2 text-sm">
+              <span className="px-2 text-xs font-medium leading-relaxed text-gray-600 dark:text-gray-200">Online</span>
+              <div className="flex flex-col gap-1">
+                {Object.values(PROFILES).map((profile: any) => (
+                  <NavigationLink key={profile.url} href={profile.url} label={profile.title} icon={profile.icon} />
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

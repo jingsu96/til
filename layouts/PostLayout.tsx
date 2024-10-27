@@ -68,11 +68,11 @@ export default function PostLayout({ content, next, prev, children, filteredPost
               <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
                 <Share />
               </div>
-              {siteMetadata.comments && (
+              {/* {siteMetadata.comments && (
                 <div className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300" id="comment">
                   <Comments slug={slug} />
                 </div>
-              )}
+              )} */}
               <footer>
                 <div className="my-5 flex gap-3 text-sm font-medium leading-5 md:justify-between md:gap-0">
                   {(next || prev) && (
@@ -104,9 +104,9 @@ export default function PostLayout({ content, next, prev, children, filteredPost
                   <CustomLink
                     href={`/${basePath}`}
                     className="link main-link break-words before:content-['↖_']" // reverse arraw
-                    aria-label="Back to Writing"
+                    aria-label="Back to Home"
                   >
-                    Back to Writing
+                    Back to Home
                   </CustomLink>
                 </div>
               </footer>
