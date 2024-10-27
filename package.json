@@ -1,9 +1,9 @@
 {
-  "name": "jingtech-en",
+  "name": "til",
   "description": "A blog about frontend tech, programming, and my learning.",
   "author": {
     "name": "JingHuang Su",
-    "url": "https://en.jing-tech.me/"
+    "url": "https://til.jing-tech.me/"
   },
   "private": true,
   "scripts": {
