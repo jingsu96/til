@@ -1,4 +1,6 @@
 'use client';
+import { useEffect, useState } from 'react';
+
 import { ScrollArea } from '@/components/lab/scroll-area';
 import { WritingList } from '@/components/lab/writing-list';
 import { FloatingHeader } from '@/components/lab/floating-header';
@@ -10,7 +12,13 @@ import { useTheme } from 'next-themes';
 const MAX_DISPLAY = 5;
 
 export default function Home({ posts: items, authors }) {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    if (resolvedTheme) setTheme(resolvedTheme);
+  }, [resolvedTheme]);
+
   return (
     <ScrollArea useScrollAreaId={true}>
       <FloatingHeader scrollTitle="Home" />
