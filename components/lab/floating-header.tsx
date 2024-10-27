@@ -91,7 +91,7 @@ export const FloatingHeader = memo(
         </div>
       </header>
     );
-  },
+  }
 );
 
 FloatingHeader.displayName = 'FloatingHeader';

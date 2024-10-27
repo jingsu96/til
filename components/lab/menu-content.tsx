@@ -25,7 +25,7 @@ const LanguageSelect = ({ className, iconSize = 20 }: { className?: string; icon
       <SelectTrigger
         className={cn(
           'mb-4 ml-auto mt-auto w-fit border-border focus:outline-none [&:has(:focus-visible)]:ring-1',
-          className,
+          className
         )}
         showIcon={false}
       >

@@ -54,7 +54,7 @@ export const WritingList = ({ items, maxDisplay }) => {
                         <span
                           className={cn(
                             'group/list:text-black pointer-events-none col-span-1 hidden items-center tabular-nums transition-colors duration-300 group-hover/list:text-gray-900 dark:group-hover/list:text-gray-100 md:grid',
-                            itemIndex === 0 && 'border-t border-gray-200',
+                            itemIndex === 0 && 'border-t border-gray-200'
                           )}
                         >
                           {itemIndex === 0 ? year : ''}

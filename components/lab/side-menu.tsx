@@ -50,11 +50,11 @@ export const SideMenu = ({
   return (
     <ScrollArea
       className={cn(
-        'hidden w-full flex-1 bg-bg-alt shadow-jt1 lg:flex lg:flex-col h-full',
+        'hidden h-full w-full flex-1 bg-bg-alt shadow-jt1 lg:flex lg:flex-col',
         isInner
           ? 'lg:min-w-80 lg:max-w-80 xl:min-w-96 xl:max-w-96'
           : 'lg:min-w-60 lg:max-w-60 xl:min-w-72 xl:max-w-72 ',
-        className,
+        className
       )}
     >
       {title && (

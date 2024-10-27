@@ -73,7 +73,7 @@ const Pill = ({ text, className }: { text: string; className?: string }) => (
   <div
     className={cn(
       'relative grid select-none items-center whitespace-nowrap rounded-lg border border-gray-900 px-3 py-1.5 font-sans text-xs font-bold uppercase text-gray-700 dark:bg-bg-primary dark:text-gray-300',
-      className,
+      className
     )}
   >
     <span>{text}</span>

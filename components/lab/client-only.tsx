@@ -8,7 +8,7 @@ export function ClientOnly({ fallback = null, children }: { fallback: React.Reac
   const isServer = useSyncExternalStore(
     emptySubscribe,
     () => false,
-    () => true,
+    () => true
   );
 
   return isServer ? <>{fallback}</> : <>{children}</>;
